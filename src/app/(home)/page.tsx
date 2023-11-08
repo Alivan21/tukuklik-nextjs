@@ -1,11 +1,11 @@
 import Iphone from "@/assets/iphone.png";
-import { Microwave, MonitorSmartphone, Shirt, Smartphone, Star } from "lucide-react";
+import Icon from "@/components/Icon";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="container flex min-h-screen flex-col gap-16 py-8 sm:p-16">
+    <div className="container mt-40 flex min-h-screen flex-col gap-16 py-8 sm:p-16 md:mt-24">
       <section className="grid w-full grid-cols-12 grid-rows-4">
         <div className="col-span-12 row-span-4 hidden border border-gray-400 bg-gray-200 p-32 sm:col-span-3 sm:block" />
         <div className="col-span-12 row-span-2 border border-gray-400 bg-gray-200 p-16 sm:col-span-5 sm:row-span-3" />
@@ -26,7 +26,7 @@ export default function Home() {
           <div className="overflow-auto xl:overflow-hidden">
             <div className="flex gap-7 border-b pb-2">
               <button className="inline-flex min-w-fit flex-col items-center gap-1 underline decoration-red-500 underline-offset-[14px]">
-                <Star className="text-red-600" size={40} strokeWidth={1} />
+                <Icon name="star" size={40} strokeWidth={1} />
                 <span className="text-red-600">Hot Trending</span>
               </button>
               {[1, 2, 3, 4, 5, 6, 7, 8].map(element => {
@@ -35,7 +35,7 @@ export default function Home() {
                     className="inline-flex min-w-fit flex-col items-center gap-1 text-gray-800 hover:text-red-600 hover:underline hover:decoration-red-500 hover:underline-offset-[14px]"
                     key={element}
                   >
-                    <Smartphone size={40} strokeWidth={1} />
+                    <Icon name="smartphone" size={40} strokeWidth={1} />
                     <span>Smartphones</span>
                   </button>
                 );
@@ -64,7 +64,7 @@ export default function Home() {
       <section className="flex flex-col gap-7 rounded-sm bg-white p-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <Microwave size={30} strokeWidth={1} />
+            <Icon name="microwave" size={30} strokeWidth={1} />
             <h1 className="text-lg font-medium">Consumer Electronic</h1>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -95,7 +95,7 @@ export default function Home() {
       <section className="flex flex-col gap-7 rounded-sm bg-white p-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <MonitorSmartphone size={30} strokeWidth={1} />
+            <Icon name="monitor-smartphone" size={30} strokeWidth={1} />
             <h1 className="text-lg font-medium">Computer & Technology</h1>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -126,7 +126,7 @@ export default function Home() {
       <section className="flex flex-col gap-7 rounded-sm bg-white p-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <Shirt size={30} strokeWidth={1} />
+            <Icon name="shirt" size={30} strokeWidth={1} />
             <h1 className="text-lg font-medium">Clothings & Apparel</h1>
           </div>
           <div className="flex flex-wrap gap-2">
