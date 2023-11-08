@@ -64,23 +64,23 @@ function Footer() {
             <div className="my-6 flex flex-col gap-2">
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
                 Policy
-                <span className="block h-[0.06rem] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
+                <span className="block h-[0.95px] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
               </Link>
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
                 Term & Condition
-                <span className="block h-[0.06rem] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
+                <span className="block h-[0.95px] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
               </Link>
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
                 Shipping
-                <span className="block h-[0.06rem] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
+                <span className="block h-[0.80px] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
               </Link>
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
                 Return
-                <span className="block h-[0.06rem] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
+                <span className="block h-[0.80px] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
               </Link>
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
                 FAQs
-                <span className="block h-[0.06rem] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
+                <span className="block h-[0.80px] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
               </Link>
             </div>
           </div>
@@ -97,7 +97,7 @@ function Footer() {
               </Link>
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
                 Contact
-                <span className="block h-[0.06rem] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
+                <span className="block h-[0.80px] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
               </Link>
             </div>
           </div>
@@ -114,7 +114,7 @@ function Footer() {
               </Link>
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
                 My Account
-                <span className="block h-[0.06rem] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
+                <span className="block h-[0.80px] max-w-0 bg-gray-900 transition-all duration-500 group-hover:max-w-full" />
               </Link>
             </div>
           </div>
