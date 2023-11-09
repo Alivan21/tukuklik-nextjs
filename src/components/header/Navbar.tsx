@@ -9,7 +9,7 @@ function Navbar() {
     <nav className="container mx-auto flex flex-col items-center gap-6 bg-white p-8 sm:flex-row md:px-16">
       <div className="my-auto flex w-full justify-between md:w-auto md:gap-0">
         <Link href="/">
-          <Image alt="logo" height={38} priority src={Logo} />
+          <Image alt="logo" className="h-8 w-[11rem] md:w-[16rem] xl:h-9" height={38} priority src={Logo} />
         </Link>
         <div className="mt-3 flex items-center justify-center gap-6 md:hidden">
           <ActionBar />

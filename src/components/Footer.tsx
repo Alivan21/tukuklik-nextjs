@@ -5,22 +5,22 @@ function Footer() {
   return (
     <footer className="border-t">
       <div className="container mx-auto flex w-full flex-col items-center gap-14 bg-white p-8 md:px-16">
-        <section className="grid w-full grid-cols-4 gap-5 border-b-2 pb-10">
-          <div className="inline-flex items-center gap-3 border-r-2">
+        <section className="grid w-full grid-cols-1 gap-8 border-b-2 pb-10 lg:grid-cols-4 lg:gap-5">
+          <div className="inline-flex items-center gap-3 lg:border-r-2">
             <Icon className="text-red-500" name="rocket" size={42} strokeWidth={1} />
             <div className="flex flex-col">
               <p className="text-lg font-semibold">Free Delivery</p>
               <span className="text-gray-700">For all oders over $99</span>
             </div>
           </div>
-          <div className="inline-flex items-center gap-3 border-r-2">
+          <div className="inline-flex items-center gap-3 lg:border-r-2">
             <Icon className="text-red-500" name="rocket" size={42} strokeWidth={1} />
             <div className="flex flex-col">
               <p className="text-lg font-semibold">Free Delivery</p>
               <span className="text-gray-700">For all oders over $99</span>
             </div>
           </div>
-          <div className="inline-flex items-center gap-3 border-r-2">
+          <div className="inline-flex items-center gap-3 lg:border-r-2">
             <Icon className="text-red-500" name="rocket" size={42} strokeWidth={1} />
             <div className="flex flex-col">
               <p className="text-lg font-semibold">Free Delivery</p>
@@ -36,7 +36,7 @@ function Footer() {
           </div>
         </section>
 
-        <section className="grid w-full grid-cols-4 gap-5 border-b-2 pb-10">
+        <section className="grid w-full grid-cols-1 gap-8 border-b-2 pb-10 lg:grid-cols-4 lg:gap-5">
           <div>
             <p className="font-semibold">Contact Us</p>
             <div className="my-6 flex flex-col gap-2 text-sm text-gray-700">
@@ -59,7 +59,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div className="ml-auto">
+          <div className="lg:ml-auto">
             <p className="font-semibold">Quick Links</p>
             <div className="my-6 flex flex-col gap-2">
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
@@ -84,7 +84,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div className="ml-auto">
+          <div className="lg:ml-auto">
             <p className="font-semibold">Company</p>
             <div className="my-6 flex flex-col gap-2">
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
@@ -101,7 +101,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div className="ml-auto">
+          <div className="lg:ml-auto">
             <p className="font-semibold">Bussiness</p>
             <div className="my-6 flex flex-col gap-2">
               <Link className="group inline-block w-fit text-gray-500 transition duration-300" href="/">
@@ -120,7 +120,7 @@ function Footer() {
           </div>
         </section>
 
-        <section className="grid w-full grid-cols-2 gap-5">
+        <section className="grid w-full grid-cols-1 gap-5">
           <h1>&copy; 2023 Tukuklik. All Rights Reserved</h1>
         </section>
       </div>
