@@ -3,34 +3,34 @@ import Icon from "./Icon";
 
 function Footer() {
   return (
-    <footer className="border-t">
+    <footer className="border-t bg-white">
       <div className="container mx-auto flex w-full flex-col items-center gap-14 bg-white p-8 md:px-16">
         <section className="grid w-full grid-cols-1 gap-8 border-b-2 pb-10 lg:grid-cols-4 lg:gap-5">
           <div className="inline-flex items-center gap-3 lg:border-r-2">
             <Icon className="text-red-500" name="rocket" size={42} strokeWidth={1} />
             <div className="flex flex-col">
-              <p className="text-lg font-semibold">Free Delivery</p>
+              <p className="text-lg font-semibold text-gray-700">Free Delivery</p>
               <span className="text-gray-700">For all oders over $99</span>
             </div>
           </div>
           <div className="inline-flex items-center gap-3 lg:border-r-2">
             <Icon className="text-red-500" name="rocket" size={42} strokeWidth={1} />
             <div className="flex flex-col">
-              <p className="text-lg font-semibold">Free Delivery</p>
+              <p className="text-lg font-semibold text-gray-700">Free Delivery</p>
               <span className="text-gray-700">For all oders over $99</span>
             </div>
           </div>
           <div className="inline-flex items-center gap-3 lg:border-r-2">
             <Icon className="text-red-500" name="rocket" size={42} strokeWidth={1} />
             <div className="flex flex-col">
-              <p className="text-lg font-semibold">Free Delivery</p>
+              <p className="text-lg font-semibold text-gray-700">Free Delivery</p>
               <span className="text-gray-700">For all oders over $99</span>
             </div>
           </div>
           <div className="inline-flex items-center gap-3">
             <Icon className="text-red-500" name="rocket" size={42} strokeWidth={1} />
             <div className="flex flex-col">
-              <p className="text-lg font-semibold">Free Delivery</p>
+              <p className="text-lg font-semibold text-gray-700">Free Delivery</p>
               <span className="text-gray-700">For all oders over $99</span>
             </div>
           </div>
@@ -38,7 +38,7 @@ function Footer() {
 
         <section className="grid w-full grid-cols-1 gap-8 border-b-2 pb-10 lg:grid-cols-4 lg:gap-5">
           <div>
-            <p className="font-semibold">Contact Us</p>
+            <p className="font-semibold text-gray-900">Contact Us</p>
             <div className="my-6 flex flex-col gap-2 text-sm text-gray-700">
               <span>Call us 24/7</span>
               <span className="text-2xl font-semibold text-red-600">1800 97 97 69</span>
@@ -121,7 +121,7 @@ function Footer() {
         </section>
 
         <section className="grid w-full grid-cols-1 gap-5">
-          <h1>&copy; 2023 Tukuklik. All Rights Reserved</h1>
+          <h1 className="text-gray-900">&copy; 2023 Tukuklik. All Rights Reserved</h1>
         </section>
       </div>
     </footer>
