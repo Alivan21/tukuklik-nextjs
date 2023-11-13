@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import Hero from "@/assets/promotion/hero.jpg";
 import Promotion1 from "@/assets/promotion/promotion-1.jpg";
 import Promotion2 from "@/assets/promotion/promotion-2.jpg";
@@ -6,8 +8,6 @@ import Promotion4 from "@/assets/promotion/promotion-4.jpg";
 import Promotion5 from "@/assets/promotion/promotion-5.jpg";
 import Promotion6 from "@/assets/promotion/promotion-6.jpg";
 import Icon from "@/components/Icon";
-import Image from "next/image";
-import Link from "next/link";
 
 function HomeBanner() {
   return (

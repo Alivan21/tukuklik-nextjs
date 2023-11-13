@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins as FontSans } from "next/font/google";
-import "@/styles/globals.css";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/header/Navbar";
+import Header from "@/components/header/Header";
+import "@/styles/globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -17,11 +17,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${fontSans.className} scroll-smooth antialiased`}>
-        <header className="container fixed top-0 z-20 mx-auto min-w-full bg-white">
-          <Navbar />
-        </header>
+    <html className="scroll-smooth antialiased" lang="en">
+      <body className={fontSans.className}>
+        <Header />
         <main className="bg-gray-100">{children}</main>
         <Footer />
       </body>

@@ -1,6 +1,6 @@
-import Iphone from "@/assets/iphone.png";
 import Image from "next/image";
 import Link from "next/link";
+import Iphone from "@/assets/iphone.png";
 
 function RecomendCard() {
   return (

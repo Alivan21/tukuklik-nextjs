@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import { Heart, ShoppingCart, User2 } from "lucide-react";
 import Link from "next/link";
+import { Heart, ShoppingCart, User2 } from "lucide-react";
 
 function ActionBar() {
   return (

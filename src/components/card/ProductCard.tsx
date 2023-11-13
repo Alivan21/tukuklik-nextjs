@@ -1,8 +1,8 @@
-import Product1 from "@/assets/product-1.webp";
 import Image from "next/image";
 import Link from "next/link";
-import Icon from "../Icon";
-import { Button } from "../ui/button";
+import Product1 from "@/assets/product-1.webp";
+import Icon from "@/components/Icon";
+import { Button } from "@/components/ui/button";
 
 function ProductCard() {
   return (

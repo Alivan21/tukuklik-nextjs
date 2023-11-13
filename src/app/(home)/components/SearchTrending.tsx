@@ -1,7 +1,7 @@
-import Iphone from "@/assets/iphone.png";
-import Icon from "@/components/Icon";
 import Image from "next/image";
 import Link from "next/link";
+import Iphone from "@/assets/iphone.png";
+import Icon from "@/components/Icon";
 
 function SearchTrending() {
   return (

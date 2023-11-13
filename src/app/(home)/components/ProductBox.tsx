@@ -1,8 +1,8 @@
+import Link from "next/link";
 import ProductCard from "@/components/card/ProductCard";
 import RecomendCard from "@/components/card/RecomendCard";
 import SingleCarousel from "@/components/carousel/SingleCarousel";
 import Icon from "@/components/Icon";
-import Link from "next/link";
 
 function ProductBox() {
   const slides = [
