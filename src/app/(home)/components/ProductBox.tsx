@@ -49,8 +49,8 @@ function ProductBox() {
           </Link>
         </div>
       </div>
-      <div className="grid h-1/2 grid-cols-12 xl:grid-rows-2">
-        <div className="col-span-12 border-t pr-2 pt-2 sm:col-span-9">
+      <div className="grid grid-cols-12 xl:grid-rows-2">
+        <div className="col-span-12 h-fit border-t pr-2 pt-2 sm:col-span-9">
           <SingleCarousel images={slides} />
         </div>
         <div className="col-span-12 row-span-2 border-t py-4 sm:col-span-3 md:border-l md:p-4">
@@ -60,7 +60,7 @@ function ProductBox() {
             <RecomendCard />
           </div>
         </div>
-        <div className="col-span-12 flex flex-col gap-6 sm:col-span-9">
+        <div className="col-span-12 row-span-2 flex flex-col gap-6 p-0 sm:col-span-9">
           <ul className="flex max-w-4xl gap-6 border-b py-4">
             <li>
               <Link className="border-b-2 border-red-600 pb-4 text-sm font-semibold text-red-600" href="/">
@@ -78,7 +78,7 @@ function ProductBox() {
               </Link>
             </li>
           </ul>
-          <div className="mr-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="mr-5 grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <ProductCard />
             <ProductCard />
             <ProductCard />
