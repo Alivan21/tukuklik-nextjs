@@ -8,9 +8,9 @@ function ProductCard() {
   return (
     <div className="group relative max-w-xs rounded-sm border">
       <Link href="#">
-        <Image alt="product image" className="rounded-t-lg p-4" height={0} src={Product1} />
+        <Image alt="product image" className="rounded-t-lg p-4" height={256} src={Product1} />
       </Link>
-      <div className="absolute left-4 top-44 hidden w-[10.8rem] bg-gray-100 bg-opacity-[0.5] group-hover:grid group-hover:grid-cols-2">
+      <div className="absolute left-4 top-[12.2rem] hidden w-[11.92rem] bg-gray-100 bg-opacity-[0.5] group-hover:grid group-hover:grid-cols-2">
         <Button className="rounded-none bg-red-500 bg-opacity-[0.8] hover:bg-red-500 hover:bg-opacity-[0.95]">
           <Icon name="heart" size={20} strokeWidth={2.5} />
         </Button>

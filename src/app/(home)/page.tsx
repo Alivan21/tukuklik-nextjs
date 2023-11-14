@@ -4,7 +4,7 @@ import SearchTrending from "./components/SearchTrending";
 
 export default function Home() {
   return (
-    <div className="container mt-40 flex min-h-screen flex-col gap-16 py-8 sm:p-16 md:mt-24">
+    <div className="container flex flex-col gap-16 py-8 sm:px-8 sm:py-12">
       <HomeBanner />
       <SearchTrending />
       <ProductBox />

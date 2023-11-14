@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 
 function Navbar() {
   return (
-    <nav className="container mx-auto flex flex-col items-center gap-6 bg-white p-8 sm:flex-row md:px-16">
+    <nav className="container flex flex-col items-center gap-6 bg-white p-8 sm:flex-row md:px-8">
       <div className="my-auto flex w-full justify-between md:w-auto md:gap-0">
         <Link href="/">
           <Image alt="logo" className="h-8 w-[11rem] md:w-[16rem] xl:h-9" height={38} priority src={Logo} />

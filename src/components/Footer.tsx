@@ -4,7 +4,7 @@ import Icon from "./Icon";
 function Footer() {
   return (
     <footer className="border-t bg-white">
-      <div className="container mx-auto flex w-full flex-col items-center gap-14 bg-white p-8 md:px-16">
+      <div className="container mx-auto flex w-full flex-col items-center gap-14 bg-white p-8 md:px-8">
         <section className="grid w-full grid-cols-1 gap-8 border-b-2 pb-10 lg:grid-cols-4 lg:gap-5">
           <div className="inline-flex items-center gap-3 lg:border-r-2">
             <Icon className="text-red-500" name="rocket" size={42} strokeWidth={1} />
