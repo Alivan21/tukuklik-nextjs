@@ -41,7 +41,7 @@ function SortBrandCard() {
       <div className="mt-5">
         <RadioGroup className="flex flex-col gap-4" defaultValue="">
           {radios.map(radio => (
-            <div className="flex items-center space-x-2" key={radio.id}>
+            <div className="flex items-center space-x-1.5" key={radio.id}>
               <RadioGroupItem id={radio.id} value={radio.value} />
               <Label className="font-normal text-gray-800" htmlFor={radio.id}>
                 {radio.label}
