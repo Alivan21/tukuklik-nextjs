@@ -49,8 +49,8 @@ function ProductBox() {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-12 xl:grid-rows-2">
-        <div className="col-span-12 h-fit border-t pr-2 pt-2 sm:col-span-9">
+      <div className="grid grid-flow-row auto-rows-max grid-cols-12">
+        <div className="col-span-12 h-fit border-t py-3.5 pr-2 sm:col-span-9">
           <SingleCarousel images={slides} />
         </div>
         <div className="col-span-12 row-span-2 border-t py-4 sm:col-span-3 md:border-l md:p-4">
