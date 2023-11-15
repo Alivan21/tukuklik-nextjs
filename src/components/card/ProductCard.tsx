@@ -6,11 +6,16 @@ import { Button } from "@/components/ui/button";
 
 function ProductCard() {
   return (
-    <div className="group relative max-w-xs scale-95 rounded-sm border">
+    <div className="group relative m-auto h-96 w-full rounded-sm border">
       <Link href="#">
-        <Image alt="product image" className="rounded-t-lg p-4" height={320} src={Product1} />
+        <div
+          className="h-2/3 w-full bg-cover bg-center duration-300"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80')`,
+          }}
+        />
       </Link>
-      <div className="absolute left-4 top-[12.55rem] hidden w-[12.32rem] bg-gray-100 bg-opacity-[0.5] group-hover:grid group-hover:grid-cols-2">
+      <div className="absolute top-[56.5%] hidden w-full bg-gray-100 bg-opacity-[0.5] group-hover:grid group-hover:grid-cols-2">
         <Button className="rounded-none bg-red-500 bg-opacity-[0.8] hover:bg-red-500 hover:bg-opacity-[0.95]">
           <Icon name="heart" size={20} strokeWidth={2.5} />
         </Button>

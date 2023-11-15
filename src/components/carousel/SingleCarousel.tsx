@@ -34,7 +34,7 @@ function SingleCarousel(props: SlideProps) {
   return (
     <div className="group relative m-auto h-96 w-full">
       <div
-        className=" h-full w-full bg-cover bg-center duration-300"
+        className="h-full w-full bg-cover bg-center duration-300"
         style={{ backgroundImage: `url(${props.images[currentIndex].url})` }}
       />
       {/* Left Arrow */}
