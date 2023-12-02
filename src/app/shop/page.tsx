@@ -25,7 +25,7 @@ function Shop() {
   ];
 
   return (
-    <div className="flex flex-col gap-16 px-4 py-6 lg:container sm:px-8 sm:py-12">
+    <>
       <section className="flex flex-col gap-8 bg-white p-2">
         <SingleCarousel images={slides} navigation />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -44,7 +44,7 @@ function Shop() {
           <ShopSection />
         </div>
       </section>
-    </div>
+    </>
   );
 }
 export default Shop;

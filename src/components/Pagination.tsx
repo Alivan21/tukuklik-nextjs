@@ -15,7 +15,10 @@ function Pagination() {
           </button>
         </li>
         <li>
-          <button className="border border-gray-300 bg-white px-3 py-2 leading-tight text-red-500 hover:bg-red-100 hover:text-red-700">
+          <button
+            className="border border-gray-300 bg-white px-3 py-2 leading-tight text-red-500 hover:bg-red-100 hover:text-red-700"
+            disabled
+          >
             2
           </button>
         </li>
