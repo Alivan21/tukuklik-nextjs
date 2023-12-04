@@ -5,8 +5,8 @@ import QuantityButton from "./ui/QuantityButton";
 
 function ProductDetail() {
   return (
-    <section className="grid auto-cols-auto grid-flow-col gap-10 rounded-sm bg-white p-4">
-      <aside className="mr-8 flex flex-col gap-0">
+    <section className="grid gap-10 rounded-sm bg-white p-4 lg:grid-cols-12 xl:auto-cols-auto xl:grid-flow-col">
+      <aside className="order-1 mr-8 flex flex-col gap-0 md:col-span-8 xl:col-span-4">
         <div className="mb-0 border p-14">Image Highlight</div>
         <div className="grid grid-cols-4">
           <span className="border p-6">1</span>
@@ -15,16 +15,16 @@ function ProductDetail() {
           <span className="border p-6">4</span>
         </div>
       </aside>
-      <div className="flex max-w-xl flex-col gap-6">
+      <div className="order-3 flex max-w-xl flex-col gap-6 md:col-span-7 xl:order-2 xl:col-span-6">
         <div className="flex flex-col gap-2">
           <h1 className="text-xl font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-          <div className="flex gap-4 border-b pb-2">
+          <div className="flex flex-col gap-4 border-b pb-2 md:flex-row">
             <span>
               By{" "}
               <Link className="text-red-500 hover:text-red-600" href="#">
                 ABC Company
               </Link>{" "}
-              |
+              <span className="hidden md:inline">|</span>
             </span>
             <div className="flex items-center">
               {[1, 2, 3, 4, 5].map(star => (
@@ -53,7 +53,7 @@ function ProductDetail() {
           </ul>
         </div>
       </div>
-      <aside className="flex max-w-xs flex-col gap-4 rounded-sm border p-4">
+      <aside className="order-2 flex max-w-4xl flex-col gap-4 rounded-sm border p-4 md:col-span-7 xl:order-3 xl:col-span-5">
         <h3 className="font-semibold">Atur jumlah dan total</h3>
         <div className="flex items-center gap-3">
           <Image alt="produk" height={32} src="/images/placeholder.png" width={32} />
@@ -64,7 +64,7 @@ function ProductDetail() {
           <QuantityButton />
           <span className="my-auto">Stok: 10</span>
         </div>
-        <div className="flex justify-between">
+        <div className="flex flex-col justify-between xl:flex-row">
           <span className="text-gray-600">Subtotal</span>
           <span className="font-semibold">Rp 15.000.000</span>
         </div>
