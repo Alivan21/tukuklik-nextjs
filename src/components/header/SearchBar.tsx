@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,9 +12,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { getCategoryList } from "@/services/home/categories";
+import { useQuery } from "@tanstack/react-query";
 import { Search } from "lucide-react";
 
 function SearchBar() {
+  const { data } = useQuery({
+    queryKey: ["category"],
+    queryFn: getCategoryList,
+  });
+
   return (
     <form className="flex w-full flex-initial justify-center" name="search">
       <Select name="category">
@@ -22,14 +31,13 @@ function SearchBar() {
         <SelectContent className="overflow-auto">
           <SelectGroup className="h-96">
             <SelectLabel>Category</SelectLabel>
-            <SelectItem value="all">All</SelectItem>
-            <SelectItem value="light">Light</SelectItem>
-            <SelectItem value="dark">Dark</SelectItem>
-            <SelectItem className="max-w-[18rem]" value="system">
-              <Link className="line-clamp-1 " href="/">
-                System Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, corrupti?
-              </Link>
-            </SelectItem>
+            {data?.map(category => (
+              <SelectItem className="max-w-[18rem]" key={category.id} value={category.slug}>
+                <Link className="line-clamp-1 " href={`/category/${category.slug}`}>
+                  {category.name}
+                </Link>
+              </SelectItem>
+            ))}
           </SelectGroup>
         </SelectContent>
       </Select>

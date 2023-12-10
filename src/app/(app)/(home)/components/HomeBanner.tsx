@@ -7,33 +7,23 @@ import Promotion3 from "@/assets/promotion/promotion-3.jpg";
 import Promotion4 from "@/assets/promotion/promotion-4.jpg";
 import Promotion5 from "@/assets/promotion/promotion-5.jpg";
 import Promotion6 from "@/assets/promotion/promotion-6.jpg";
-import Icon from "@/components/Icon";
+import { getCategoryList } from "@/services/home/categories";
+import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
+import CategoryBanner from "./CategoryBanner";
 
-function HomeBanner() {
+async function HomeBanner() {
+  const queryClient = new QueryClient();
+
+  await queryClient.prefetchQuery({
+    queryKey: ["category"],
+    queryFn: getCategoryList,
+  });
+
   return (
-    <section className="grid w-full grid-cols-12 grid-rows-2 lg:grid-rows-3">
-      <div className="col-span-12 row-span-3 hidden rounded-sm bg-white sm:flex sm:flex-col sm:gap-2 lg:col-span-3">
-        <Link className="flex items-center gap-2 p-2 hover:bg-red-500 hover:text-white" href="/">
-          <Icon name="star" size={25} strokeWidth={1} />
-          <h1 className="text-sm">Hot Trending</h1>
-        </Link>
-        <Link className="flex items-center gap-2 p-2 hover:bg-red-500 hover:text-white" href="/">
-          <Icon name="microwave" size={25} strokeWidth={1} />
-          <h1 className="text-sm">Consumer Electronic</h1>
-        </Link>
-        <Link className="flex items-center gap-2 p-2 hover:bg-red-500 hover:text-white" href="/">
-          <Icon name="monitor-smartphone" size={25} strokeWidth={1} />
-          <h1 className="text-sm">Computer & Technology</h1>
-        </Link>
-        <Link className="flex items-center gap-2 p-2 hover:bg-red-500 hover:text-white" href="/">
-          <Icon name="shirt" size={25} strokeWidth={1} />
-          <h1 className="text-sm">Clothings & Apparel</h1>
-        </Link>
-        <Link className="flex items-center gap-2 p-2 hover:bg-red-500 hover:text-white" href="/">
-          <Icon name="lamp-desk" size={25} strokeWidth={1} />
-          <h1 className="text-sm">Home, Garden & Kitchen</h1>
-        </Link>
-      </div>
+    <section className="grid max-h-[40rem] w-full grid-cols-12 grid-rows-2 lg:grid-rows-3">
+      <HydrationBoundary state={dehydrate(queryClient)}>
+        <CategoryBanner />
+      </HydrationBoundary>
       <div className="col-span-12 row-span-2 bg-white lg:col-span-5 lg:row-span-2">
         <Link href="/">
           <Image alt="iphone" className="h-full w-full bg-cover bg-center" height={640} priority src={Hero} />
