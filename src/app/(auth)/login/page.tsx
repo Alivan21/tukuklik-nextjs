@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/logo.png";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import LoginForm from "./components/LoginForm";
 
 function LoginPage() {
   return (
@@ -19,42 +17,7 @@ function LoginPage() {
           <h2 className="text-2xl font-bold md:text-3xl">Sign in</h2>
           <p className="text-base md:text-lg">Selamat Datang Kembali, Silakan masukkan detail Anda.</p>
         </div>
-        <form className="flex max-w-md flex-col space-y-5">
-          <div className="inline-flex flex-col gap-2">
-            <Label className="text-lg font-bold" htmlFor="username">
-              Username
-            </Label>
-            <Input
-              autoComplete="username"
-              className="flex rounded-lg border-2 border-black font-medium placeholder:font-normal"
-              id="username"
-              name="username"
-              placeholder="Username"
-              type="text"
-            />
-          </div>
-          <div className="inline-flex flex-col gap-2">
-            <Label className="text-lg font-bold" htmlFor="password">
-              Password
-            </Label>
-            <Input
-              className="flex rounded-lg border-2 border-black font-medium placeholder:font-normal"
-              id="password"
-              name="password"
-              placeholder="********"
-              type="password"
-            />
-          </div>
-          <Button className="bg-red-600 px-3 py-2 text-base font-bold hover:bg-red-700 md:px-4 md:py-3" type="submit">
-            Login
-          </Button>
-          <div>
-            <span className="text-base">Don&apos;t have an account? </span>
-            <Link className="font-medium text-red-600 underline underline-offset-2" href="/register">
-              Register
-            </Link>
-          </div>
-        </form>
+        <LoginForm />
       </div>
     </div>
   );

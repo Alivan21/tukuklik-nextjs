@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins as FontSans } from "next/font/google";
+import AuthProvider from "@/providers/AuthProvider";
+import TanstackProvider from "@/providers/TanstackProvider";
+import { Toaster } from "react-hot-toast";
 import "@/styles/globals.css";
 
 const fontSans = FontSans({
@@ -16,7 +19,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className="scroll-smooth antialiased" lang="en">
-      <body className={`${fontSans.className} m-0 p-0`}>{children}</body>
+      <body className={`${fontSans.className} m-0 p-0`}>
+        <TanstackProvider>
+          <AuthProvider>
+            <Toaster />
+            {children}
+          </AuthProvider>
+        </TanstackProvider>
+      </body>
     </html>
   );
 }
