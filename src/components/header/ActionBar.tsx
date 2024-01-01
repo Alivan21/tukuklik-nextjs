@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import Link from "next/link";
 import {
   DropdownMenu,
@@ -10,6 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { AuthContext } from "@/contexts/AuthContext";
 import { useSignOut } from "@/services/auth/logout";
 import Cookies from "js-cookie";
 import { Heart, ShoppingCart, User2 } from "lucide-react";
@@ -18,6 +19,7 @@ import toast from "react-hot-toast";
 function ActionBar() {
   const userCookies = Cookies.get("token");
   const username = Cookies.get("username");
+  const { user } = useContext(AuthContext);
 
   const { mutateAsync: SignOutMutation, isPending } = useSignOut();
 
@@ -29,7 +31,7 @@ function ActionBar() {
     });
   }
 
-  if (userCookies && username) {
+  if (userCookies && username && user) {
     return (
       <Fragment>
         <Link href="/wishlist">
@@ -46,7 +48,7 @@ function ActionBar() {
             <DropdownMenuLabel>Hi {username}</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <button className="py-1 font-medium" disabled={isPending} onClick={handleSignOut}>
+              <button className="w-full py-1 text-start font-medium" disabled={isPending} onClick={handleSignOut}>
                 Logout
               </button>
             </DropdownMenuItem>

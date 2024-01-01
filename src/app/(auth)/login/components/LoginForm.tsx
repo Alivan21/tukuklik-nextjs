@@ -19,7 +19,7 @@ function LoginForm() {
   useEffect(() => {
     const userCookies = Cookies.get("token");
     if (user && userCookies) {
-      router.push("/");
+      router.replace("/");
     }
   }, [router, user]);
 

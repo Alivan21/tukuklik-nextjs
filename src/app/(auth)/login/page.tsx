@@ -8,7 +8,7 @@ function LoginPage() {
     <div className="relative flex flex-1 flex-col items-center justify-center px-10">
       <div className="mb-6 flex w-full items-center justify-center py-4 lg:hidden">
         <Link href="/">
-          <Image alt="logo" className="h-9 w-auto" height={192} src={Logo} width={192} />
+          <Image alt="logo" className="h-9 w-auto" height={192} priority src={Logo} width={192} />
         </Link>
       </div>
       {/* Login box */}

@@ -14,7 +14,7 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
             </Link>
           </div>
           <div className="space-y-5">
-            <Image alt="logo" className="h-auto w-auto" height={640} src="/auth.png" width={640} />
+            <Image alt="logo" className="h-auto w-auto" height={640} priority src="/auth.png" width={640} />
           </div>
           <p className="font-medium">© 2023 TukuKlik</p>
         </div>
