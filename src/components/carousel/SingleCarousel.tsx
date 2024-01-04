@@ -1,6 +1,6 @@
 "use client";
 
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Circle } from "lucide-react";
 
 type SlideImages = {
@@ -10,22 +10,37 @@ type SlideImages = {
 type SlideProps = {
   images: SlideImages[];
   navigation?: boolean;
+  autoplay?: boolean;
+  autoplayInterval?: number;
 };
 
 function SingleCarousel(props: SlideProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const prevSlide = () => {
+    clearInterval(intervalRef.current as never);
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? props.images.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
+    clearInterval(intervalRef.current as never);
     const isLastSlide = currentIndex === props.images.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, props.images.length]);
+
+  useEffect(() => {
+    if (props.autoplay) {
+      intervalRef.current = setInterval(() => {
+        nextSlide();
+      }, props.autoplayInterval || 3000);
+    }
+
+    return () => clearInterval(intervalRef.current as never);
+  }, [nextSlide, props.autoplay, props.autoplayInterval]);
 
   const goToSlide = (slideIndex: SetStateAction<number>) => {
     setCurrentIndex(slideIndex);
@@ -48,14 +63,14 @@ function SingleCarousel(props: SlideProps) {
       {props.navigation ? (
         <div className="absolute bottom-0 right-1/2 flex justify-center py-2">
           {props.images.map((slide, slideIndex) => (
-            <div className="cursor-pointer" key={slideIndex} onClick={() => goToSlide(slideIndex)}>
+            <button key={slideIndex} onClick={() => goToSlide(slideIndex)}>
               <Circle
                 stroke="#e5e7eb"
                 {...(slideIndex === currentIndex && { stroke: "#e5e7eb", fill: "#ef4444" })}
                 size={18}
                 strokeWidth={1}
               />
-            </div>
+            </button>
           ))}
         </div>
       ) : null}

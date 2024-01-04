@@ -1,65 +1,22 @@
-import Image from "next/image";
-import Link from "next/link";
-import Hero from "@/assets/promotion/hero.jpg";
-import Promotion1 from "@/assets/promotion/promotion-1.jpg";
-import Promotion2 from "@/assets/promotion/promotion-2.jpg";
-import Promotion3 from "@/assets/promotion/promotion-3.jpg";
-import Promotion4 from "@/assets/promotion/promotion-4.jpg";
-import Promotion5 from "@/assets/promotion/promotion-5.jpg";
-import Promotion6 from "@/assets/promotion/promotion-6.jpg";
-import { getCategoryList } from "@/services/home/categories";
-import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
-import CategoryBanner from "./CategoryBanner";
+import SingleCarousel from "@/components/carousel/SingleCarousel";
 
-async function HomeBanner() {
-  const queryClient = new QueryClient();
-
-  await queryClient.prefetchQuery({
-    queryKey: ["category"],
-    queryFn: getCategoryList,
-  });
+function HomeBanner() {
+  const slides = [
+    {
+      url: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
 
   return (
-    <section className="grid max-h-[40rem] w-full grid-cols-12 grid-rows-2 lg:grid-rows-3">
-      <HydrationBoundary state={dehydrate(queryClient)}>
-        <CategoryBanner />
-      </HydrationBoundary>
-      <div className="col-span-12 row-span-2 bg-white lg:col-span-5 lg:row-span-2">
-        <Link href="/">
-          <Image alt="iphone" className="h-full w-full bg-cover bg-center" height={640} priority src={Hero} />
-        </Link>
-      </div>
-      <div className="col-span-12 hidden lg:col-span-2 lg:block">
-        <Link href="/">
-          <Image alt="iphone" className="h-full w-full bg-cover bg-center" height={640} priority src={Promotion1} />
-        </Link>
-      </div>
-      <div className="col-span-6 hidden lg:col-span-2 lg:block">
-        <Link href="/">
-          <Image alt="iphone" className="h-full w-full bg-cover bg-center" height={640} priority src={Promotion2} />
-        </Link>
-      </div>
-      <div className="col-span-12 row-span-1 lg:col-span-4">
-        <Link href="/">
-          <Image alt="iphone" className="h-full w-full bg-cover bg-center" height={640} priority src={Promotion3} />
-        </Link>
-      </div>
-      <div className="col-span-12 row-span-1 lg:col-span-5">
-        <Link href="/">
-          <Image alt="iphone" className="h-full w-full bg-cover bg-center" height={640} priority src={Promotion6} />
-        </Link>
-      </div>
-      <div className="col-span-6 lg:col-span-2">
-        <Link href="/">
-          <Image alt="iphone" className="h-full w-full bg-cover bg-center" height={640} priority src={Promotion4} />
-        </Link>
-      </div>
-      <div className="col-span-6 lg:col-span-2">
-        <Link href="/">
-          <Image alt="iphone" className="h-full w-full bg-cover bg-center" height={640} priority src={Promotion5} />
-        </Link>
-      </div>
-    </section>
+    <div className="container rounded-sm bg-white px-14 py-2">
+      <SingleCarousel autoplay images={slides} />
+    </div>
   );
 }
 export default HomeBanner;

@@ -8,7 +8,7 @@ export function useSignOut() {
   const { setUser } = useContext(AuthContext);
   return useMutation({
     mutationFn: async () => {
-      const response = await httpClient.post("/auth/logout");
+      await httpClient.post("/auth/logout");
       Cookies.remove("token");
       Cookies.remove("username");
       setUser(null);
