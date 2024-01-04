@@ -18,7 +18,7 @@ function LoginForm() {
 
   useEffect(() => {
     const userCookies = Cookies.get("token");
-    if (user && userCookies) {
+    if (userCookies) {
       router.replace("/");
     }
   }, [router, user]);
@@ -35,9 +35,8 @@ function LoginForm() {
       toast.promise(SignInMutation(), {
         loading: "Loading...",
         success: "Login Success",
-        error: "Login Failed",
+        error: "Email atau Password salah",
       });
-      router.push("/");
     } catch (error) {
       toast.error("Email atau Password salah");
     }

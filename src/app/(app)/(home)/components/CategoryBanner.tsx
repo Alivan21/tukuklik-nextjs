@@ -15,7 +15,7 @@ function CategoryBanner() {
       {data?.map(category => (
         <Link
           className="flex items-center gap-2 p-2 hover:bg-red-500 hover:text-white"
-          href={`/category/${category.slug}`}
+          href={`/shop?=${category.slug}`}
           key={category.id}
         >
           <Star size={25} strokeWidth={1} />

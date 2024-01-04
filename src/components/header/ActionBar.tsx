@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import Link from "next/link";
 import {
   DropdownMenu,
@@ -10,7 +10,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { AuthContext } from "@/contexts/AuthContext";
 import { useSignOut } from "@/services/auth/logout";
 import Cookies from "js-cookie";
 import { Heart, ShoppingCart, User2 } from "lucide-react";
@@ -19,7 +18,6 @@ import toast from "react-hot-toast";
 function ActionBar() {
   const userCookies = Cookies.get("token");
   const username = Cookies.get("username");
-  const { user } = useContext(AuthContext);
 
   const { mutateAsync: SignOutMutation, isPending } = useSignOut();
 
@@ -31,12 +29,9 @@ function ActionBar() {
     });
   }
 
-  if (userCookies && username && user) {
+  if (userCookies && username) {
     return (
       <Fragment>
-        <Link href="/wishlist">
-          <Heart className="hidden md:block" />
-        </Link>
         <Link href="/cart">
           <ShoppingCart />
         </Link>
@@ -59,9 +54,6 @@ function ActionBar() {
   }
   return (
     <Fragment>
-      <Link href="/wishlist">
-        <Heart className="hidden md:block" />
-      </Link>
       <Link href="/cart">
         <ShoppingCart />
       </Link>

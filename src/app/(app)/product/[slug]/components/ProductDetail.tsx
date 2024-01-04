@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import QuantityButton from "@/components/QuantityButton";
 import { Separator } from "@/components/ui/separator";
-import QuantityButton from "./ui/QuantityButton";
 
 function ProductDetail() {
   return (

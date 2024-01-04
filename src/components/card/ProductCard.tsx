@@ -1,13 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
-import Product1 from "@/assets/product-1.webp";
 import Icon from "@/components/Icon";
 import { Button } from "@/components/ui/button";
 
 function ProductCard() {
   return (
     <div className="group relative m-auto h-96 w-full rounded-sm border">
-      <Link href="#">
+      <Link href="/product/1">
         <div
           className="h-2/3 w-full bg-cover bg-center duration-300"
           style={{
@@ -15,16 +13,13 @@ function ProductCard() {
           }}
         />
       </Link>
-      <div className="absolute top-[56.5%] hidden w-full bg-gray-100 bg-opacity-[0.5] group-hover:grid group-hover:grid-cols-2">
-        <Button className="rounded-none bg-red-500 bg-opacity-[0.8] hover:bg-red-500 hover:bg-opacity-[0.95]">
-          <Icon name="heart" size={20} strokeWidth={2.5} />
-        </Button>
-        <Button className="rounded-none bg-yellow-500 bg-opacity-[0.8] hover:bg-yellow-500 hover:bg-opacity-[0.95]">
+      <div className="absolute top-[56.5%] hidden w-full bg-gray-100 bg-opacity-[0.7] group-hover:grid group-hover:grid-cols-1">
+        <Button className="rounded-none bg-yellow-500 bg-opacity-[0.8] hover:bg-yellow-500 hover:bg-opacity-[1]">
           <Icon name="shopping-cart" size={20} strokeWidth={2.5} />
         </Button>
       </div>
       <div className="flex flex-col gap-2.5 p-4">
-        <Link href="#">
+        <Link href="/product/1">
           <h3 className="font-medium tracking-tight text-blue-600 hover:text-red-600">Starlight Sport</h3>
         </Link>
         <div className="flex items-center">

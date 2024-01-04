@@ -1,10 +1,12 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/logo.png";
 import { getCategoryList } from "@/services/home/categories";
 import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
-import ActionBar from "./ActionBar";
 import SearchBar from "./SearchBar";
+
+const ActionBar = dynamic(() => import("./ActionBar"), { ssr: false });
 
 async function Navbar() {
   const queryClient = new QueryClient();
